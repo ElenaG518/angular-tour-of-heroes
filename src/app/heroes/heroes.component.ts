@@ -22,6 +22,10 @@ export class HeroesComponent implements OnInit {
   }
 
   getHeroes(): void {
+    // HeroService.getHeroes() will return an Observable because it will eventually use
+    // the Angular HttpClient.get method to fetch the heroes and HttpClient.get()
+    // returns an Observable.
+
     // this.heroService.getHeroes() receives an Observable<Hero[]>
     // then we call subscribe on it as in Observable.subscribe()
     // The new version waits for the Observable to emit the array of heroes— which
